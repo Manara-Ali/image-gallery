@@ -5,6 +5,18 @@ import React from "react";
 
 // 3. CREATE A CLASS BASED COMPONENT
 class SearchBar extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      userInput: "",
+    };
+  }
+
+  // Create a method to accept user input
+  handleInputChange = (e) => {
+    this.setState({ userInput: e.target.value });
+  };
   render() {
     return (
       <div className="ui segment">
@@ -13,7 +25,10 @@ class SearchBar extends React.Component {
             <label htmlFor="exampleInputEmail1" className="form-label">
               Search a Picture
             </label>
-            <input />
+            <input
+              onChange={this.handleInputChange}
+              value={this.state.userInput}
+            />
           </div>
           <button type="submit" className="btn btn-secondary">
             Submit
