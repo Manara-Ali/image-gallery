@@ -2,12 +2,13 @@
 import React from "react";
 
 // 2. ADDITIONAL IMPORTS
+import SearchBar from "../SearchBar";
 
 // 3. CREATE FUNCTION BASED COMPONENT
 const App = () => {
   return (
     <div>
-      <h1>App Component</h1>
+      <SearchBar />
     </div>
   );
 };
