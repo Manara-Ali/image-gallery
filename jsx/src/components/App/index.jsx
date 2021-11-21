@@ -7,7 +7,7 @@ import SearchBar from "../SearchBar";
 // 3. CREATE FUNCTION BASED COMPONENT
 const App = () => {
   return (
-    <div>
+    <div className="ui container" style={{ marginTop: "20px" }}>
       <SearchBar />
     </div>
   );

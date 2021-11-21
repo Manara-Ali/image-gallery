@@ -7,8 +7,18 @@ import React from "react";
 class SearchBar extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Search Bar</h1>
+      <div className="ui segment">
+        <form className="ui form">
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">
+              Search a Picture
+            </label>
+            <input />
+          </div>
+          <button type="submit" className="btn btn-secondary">
+            Submit
+          </button>
+        </form>
       </div>
     );
   }
