@@ -17,10 +17,17 @@ class SearchBar extends React.Component {
   handleInputChange = (e) => {
     this.setState({ userInput: e.target.value });
   };
+
+  // Create a method to handle form submission
+  handleFormSubmission = (e) => {
+    e.preventDefault();
+    console.log("I was submitted!");
+  };
+
   render() {
     return (
       <div className="ui segment">
-        <form className="ui form">
+        <form className="ui form" onSubmit={this.handleFormSubmission}>
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">
               Search a Picture
