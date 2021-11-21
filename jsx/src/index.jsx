@@ -10,7 +10,6 @@ import App from "./components/App";
 
 // 4. AUTO RELOAD
 if (module.hot) {
-  console.log("Module is hot");
   module.hot.accept();
 }
 
