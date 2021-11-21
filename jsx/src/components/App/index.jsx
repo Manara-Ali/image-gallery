@@ -6,10 +6,14 @@ import SearchBar from "../SearchBar";
 
 // 3. CREATE FUNCTION BASED COMPONENT
 class App extends React.Component {
+  // Create a method to retrieve user search term
+  handleOnSubmit = (term) => {
+    console.log(term);
+  };
   render() {
     return (
       <div className="ui container" style={{ marginTop: "20px" }}>
-        <SearchBar />
+        <SearchBar onFormSubmit={this.handleOnSubmit} />
       </div>
     );
   }
