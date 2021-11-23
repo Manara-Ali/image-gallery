@@ -4,6 +4,7 @@ import React from "react";
 // 2. ADDITIONAL IMPORTS
 import unsplashAPI from "../api/unsplash";
 import SearchBar from "../SearchBar";
+import ImageList from "../ImageList";
 
 // 3. CREATE FUNCTION BASED COMPONENT
 class App extends React.Component {
@@ -32,6 +33,7 @@ class App extends React.Component {
     return (
       <div className="ui container" style={{ marginTop: "20px" }}>
         <SearchBar onFormSubmit={this.handleOnSubmit} />
+        <ImageList images={this.state.images} />
       </div>
     );
   }
