@@ -1,3 +1,6 @@
+// IMPORT CSS FILE
+import "./SearchBar.css";
+
 // 1. IMPORT REACT
 import React from "react";
 
@@ -30,7 +33,7 @@ class SearchBar extends React.Component {
         <form className="ui form" onSubmit={this.handleFormSubmission}>
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">
-              Search a Picture
+              Search for a Picture
             </label>
             <input
               onChange={this.handleInputChange}

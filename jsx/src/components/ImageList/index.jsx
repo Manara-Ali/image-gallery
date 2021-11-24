@@ -1,3 +1,6 @@
+// IMPORT CSS FILE
+import "./ImageList.css";
+
 // 1. IMPORT REACT
 import React from "react";
 
@@ -7,13 +10,9 @@ import ImageCard from "../ImageCard";
 // 3. CREATE A FUNCTION BASED COMPONENT
 const ImageList = (props) => {
   const listOfImages = props.images.map((element) => {
-    return (
-      <div key={element.id}>
-        <ImageCard element={element} />
-      </div>
-    );
+    return <ImageCard key={element.id} element={element} />;
   });
-  return <div>{listOfImages}</div>;
+  return <div className="image-list">{listOfImages}</div>;
 };
 
 // 4. EXPORT THAT COMPONENT TO BE USED IN OTHER PARTS OF OUR APPLICATION
